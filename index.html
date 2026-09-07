@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Patterson Protective Coatings - Trade Counter Concept - AG1 Consulting</title>
+<title>Patterson Protective Coatings - Belfast</title>
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -117,76 +117,134 @@ footer a:hover{color:var(--acc2)}
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 </style>
 <style>
-:root{--deep:#12212e;--deep2:#1e3547;--acc:#c4611a;--acc2:#f0a563}
-h1,h2,.box h3,.step h3{font-family:Bitter,Georgia,"Times New Roman",serif}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media(max-width:760px){.steps{grid-template-columns:1fr}}
-.step{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:14px;padding:22px}
-.step .n{width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+h1,h2,h3,.sh{font-family:Bitter,Georgia,"Times New Roman",serif}
+
+/* hero pills - light text on the dark hero */
+.hpills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.hpill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.30);color:#eef3f8;
+  border-radius:999px;padding:8px 15px;font-size:13px;font-weight:600}
+
+/* hero quote card */
+.qcard{background:#fff;border-radius:16px;padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.34)}
+.qcard h3{font-size:20px;margin:0 0 4px;color:var(--ink)}
+.qcard .qs{font-size:13.5px;color:var(--mut);margin-bottom:16px}
+.qcard label{display:block;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:700;color:var(--mut);margin:12px 0 5px}
+.qcard select,.qcard input{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;
+  font:inherit;font-size:14.5px;background:#fff;color:var(--ink)}
+.qcard .go{width:100%;margin-top:18px;background:var(--acc);color:#fff;border:0;border-radius:10px;
+  padding:14px;font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+.qcard .fine{font-size:11.5px;color:var(--mut);text-align:center;margin-top:10px}
+
+/* generic */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.lede2{font-size:16.5px;color:var(--mut);max-width:640px;margin-bottom:6px}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.step{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+  border-radius:14px;padding:22px}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:15px}
 .step h3{margin:0 0 7px;font-size:17px}
 .step p{margin:0;font-size:14.5px;color:var(--mut)}
 
-/* trade counter grid */
+/* product grid */
 .pg{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:18px}
 @media(max-width:1000px){.pg{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.pg{grid-template-columns:1fr}}
-.pc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column}
+.pc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;
+  display:flex;flex-direction:column}
 .pc .sku{font-size:11px;letter-spacing:.09em;color:var(--mut);text-transform:uppercase;font-weight:700}
 .pc b.nm{display:block;font-size:15px;margin:6px 0 10px;color:var(--ink);line-height:1.32}
 .pc .lst{font-size:12.5px;color:var(--mut);text-decoration:line-through}
-.pc .yr{font-size:22px;font-weight:800;color:var(--deep);font-family:Bitter,Georgia,serif}
 .pc .yl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);font-weight:800;margin-bottom:2px}
-.pc .stk{font-size:12.5px;color:#1f7a3d;font-weight:700;margin:9px 0 12px}
+.pc .yr{font-size:22px;font-weight:800;color:var(--deep);font-family:Bitter,Georgia,serif}
+.pc .stk{font-size:12.5px;color:var(--ok);font-weight:700;margin:9px 0 12px}
 .pc .stk.low{color:#a8620f}
 .pc .add{margin-top:auto;display:flex;gap:7px;align-items:center}
-.pc .qty{width:54px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:14px;text-align:center;background:#fff}
-.pc .ab{flex:1;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:10px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer}
+.pc .qty{width:54px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;
+  font-size:14px;text-align:center;background:#fff;color:var(--ink)}
+.pc .ab{flex:1;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:10px;font:inherit;
+  font-weight:700;font-size:13.5px;cursor:pointer}
 
 /* reorder */
 .ro{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:16px}
-.ro .rh{background:var(--deep);color:#fff;padding:14px 20px;font-weight:700;font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.ro .rh span{color:#9fc0d4;font-weight:500;font-size:13.5px}
-.rr{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 20px;border-top:1px solid var(--line);flex-wrap:wrap}
-.rr .rl{font-size:14.5px}
-.rr .rl b{display:block;color:var(--ink)}
+.ro .rh{background:var(--deep);color:#fff;padding:14px 20px;font-weight:700;font-size:15px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ro .rh span{color:#a9c4dc;font-weight:500;font-size:13.5px}
+.rr{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 20px;
+  border-top:1px solid var(--line);flex-wrap:wrap}
+.rr .rl b{display:block;color:var(--ink);font-size:14.5px}
 .rr .rl span{font-size:12.5px;color:var(--mut)}
-.rr .rb{background:#fff;border:1.5px solid var(--acc);color:var(--acc);border-radius:8px;padding:8px 16px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer;white-space:nowrap}
+.rr .rb{background:#fff;border:1.5px solid var(--acc);color:var(--acc);border-radius:8px;
+  padding:8px 16px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer;white-space:nowrap}
 
-/* spec panel */
-.spec{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#fff;border-radius:18px;padding:34px}
+/* brands */
+.bl{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-top:16px}
+@media(max-width:900px){.bl{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.bl{grid-template-columns:1fr 1fr}}
+.bi{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:18px 10px;
+  text-align:center;font-family:Bitter,Georgia,serif;font-size:16px;color:var(--deep2);font-weight:700}
+
+/* specifier band */
+.spec{background:linear-gradient(155deg,var(--deep),var(--deep2));color:#fff;border-radius:18px;padding:34px}
 .spec h2{color:#fff;font-size:27px;margin:0 0 10px}
-.spec>p{color:#b9d2e0;font-size:16px;max-width:640px}
+.spec .sp{color:#c2d6e6;font-size:16px;max-width:640px}
 .dl{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}
 @media(max-width:700px){.dl{grid-template-columns:1fr}}
-.dli{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:11px;padding:15px 17px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dli{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:11px;
+  padding:15px 17px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .dli b{font-size:14.5px;color:#fff;display:block}
-.dli span{font-size:12.5px;color:#9fc0d4}
-.dli .g{background:var(--acc);color:#fff;border-radius:7px;padding:7px 13px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.dli i{font-style:normal;font-size:12.5px;color:#a9c4dc}
+.dli .g{background:var(--acc);color:#fff;border-radius:7px;padding:7px 13px;font-size:12.5px;
+  font-weight:700;white-space:nowrap}
+
+/* optin */
+.optin{background:var(--panel);border:2px solid var(--acc);border-radius:16px;padding:28px;margin-top:18px}
+.optin h3{margin:0 0 6px;font-size:21px}
+.optin p{font-size:14.5px;color:var(--mut);margin:0 0 16px;max-width:560px}
+.orow{display:flex;gap:10px;flex-wrap:wrap}
+.orow input{flex:1;min-width:210px;border:1px solid var(--line);border-radius:9px;padding:12px;
+  font:inherit;font-size:14.5px;background:#fff;color:var(--ink)}
+.orow button{background:var(--acc);color:#fff;border:0;border-radius:9px;padding:12px 24px;
+  font:inherit;font-weight:700;font-size:14.5px;cursor:pointer;white-space:nowrap}
+.ofine{font-size:12px;color:var(--mut);margin-top:11px}
 
 /* case study */
-.cs{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;align-items:center}
-@media(max-width:820px){.cs{grid-template-columns:1fr}}
-.csb{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:14px;padding:24px}
-.csb .k{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--acc);font-weight:800;margin-bottom:8px}
-.csb h3{font-family:Bitter,Georgia,serif;font-size:23px;margin:0 0 10px}
-.csb p{font-size:14.5px;color:var(--mut);margin:0 0 9px}
-.urlbox{background:#0f1b24;border-radius:11px;padding:20px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;color:#dfe9ef;line-height:2}
-.urlbox .bad{color:#ff9b8a}
-.urlbox .good{color:#8ee6a8}
-.urlbox .lbl{color:#7f9cad;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:9px;font-family:IBM Plex Sans,sans-serif;font-weight:700}
+.csg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media(max-width:880px){.csg{grid-template-columns:1fr}}
+.csc{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.csc .cim{height:104px;background:linear-gradient(135deg,var(--deep),var(--acc));
+  display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);
+  font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.csc .cb{padding:20px}
+.csc .k{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--acc);
+  font-weight:800;margin-bottom:7px}
+.csc h3{margin:0 0 8px;font-size:18px}
+.csc p{font-size:14px;color:var(--mut);margin:0}
 
-.notebox{max-width:900px;margin:0 auto 34px;background:#fdf7e7;border:1px solid #e0c479;border-radius:14px;padding:20px 24px}
-.notebox .nl{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:#8a6a1c;font-weight:800;margin-bottom:8px}
-.notebox p{font-size:14.5px;color:#4a4231;margin:0 0 9px}.notebox p:last-child{margin:0}
-.notebox b{color:#241c0c}
-.big{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#fff;border-radius:18px;padding:34px;text-align:center}
-.big h2{color:#fff;font-size:29px;margin-bottom:10px}
-.big p{color:#bcd8e2;font-size:16.5px;max-width:660px;margin:0 auto}
-.stick{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;background:var(--acc);text-align:center;padding:13px;font-weight:800;color:#fff;text-decoration:none}
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+@media(max-width:820px){.facts{grid-template-columns:1fr 1fr}}
+.fct{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:20px;text-align:center}
+.fct b{display:block;font-family:Bitter,Georgia,serif;font-size:28px;color:var(--deep2)}
+.fct span{font-size:12px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
+
+.cband{background:linear-gradient(155deg,var(--deep),var(--deep2));color:#fff;border-radius:18px;
+  padding:36px;text-align:center}
+.cband h2{color:#fff;font-size:29px;margin:0 0 10px}
+.cband p{color:#c2d6e6;font-size:16.5px;max-width:620px;margin:0 auto 20px}
+.cband .cb2{display:inline-block;background:var(--acc);color:#fff;border-radius:10px;
+  padding:14px 30px;font-weight:700;text-decoration:none;font-size:15.5px}
+
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;background:var(--acc);
+  text-align:center;padding:13px;font-weight:800;color:#fff;text-decoration:none}
 @media(max-width:760px){.stick{display:block}footer{padding-bottom:78px}}
 </style>
 
-<div class="demobar">CONCEPT DEMONSTRATION &mdash; built by AG1 Consulting for Patterson Protective Coatings Ltd &middot; not a live site &middot; all prices, stock levels and order history shown are invented placeholders</div>
+<div class="demobar">CONCEPT DEMONSTRATION &mdash; built by AG1 Consulting for Patterson Protective Coatings Ltd &middot; not a live website &middot; all prices, stock levels, reviews and order history shown are invented placeholders</div>
 
 <div class="call">Trade counter &middot; Albertbridge Road, Belfast &middot; 028 9073 1333</div>
 
@@ -194,37 +252,85 @@ h1,h2,.box h3,.step h3{font-family:Bitter,Georgia,"Times New Roman",serif}
   <div class="wrap navin">
     <div class="logo">Patterson <span>Protective Coatings</span></div>
     <div class="navl">
+      <a href="#estimate">Get an Estimate</a>
       <a href="#counter">Trade Counter</a>
-      <a href="#reorder">Reorder</a>
+      <a href="#brands">Brands</a>
       <a href="#spec">Specifiers</a>
       <a href="#work">Our Work</a>
-      <a href="#note">What Changed</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap heroin">
-    <div class="eyeb">Belfast &middot; supplying the trade since 1999</div>
-    <h1>Your counter. Open at six in the morning.</h1>
-    <p>Jotun, Remmers, Rust-Oleum, Tor, Flexcrete and Watco &mdash; <b>571 products, your agreed trade
-    price, and last month's order one click away.</b> Coatings still come with a specification and a
-    conversation. Brushes and rollers should not need one.</p>
-    <div class="badges">
-      <span class="bdg">Trade account pricing</span>
-      <span class="bdg">Next-day across NI</span>
-      <span class="bdg">27 years supplying Belfast</span>
+    <div>
+      <div class="eyeb">Belfast &middot; supplying the trade since 1999</div>
+      <h1>Tell us the job. We will tell you <em>exactly what it takes</em>.</h1>
+      <p class="lede">Send us the substrate, the area and the condition, and we will come back with
+      the system, the quantities and the coverage &mdash; then supply it. Twenty-seven years of
+      working out how much paint a job actually needs, so you are not guessing on site.</p>
+      <div class="hpills">
+        <span class="hpill">Free materials take-off</span>
+        <span class="hpill">Trade accounts &middot; 30-day terms</span>
+        <span class="hpill">Next-day across Northern Ireland</span>
+      </div>
+    </div>
+
+    <div class="qcard" id="estimate">
+      <h3>Get a materials estimate</h3>
+      <div class="qs">Tell us about the job. We will come back with the system and the quantities.</div>
+      <label for="d1">What are you coating?</label>
+      <select id="d1">
+        <option>Choose one&hellip;</option>
+        <option>Structural steel</option>
+        <option>Resin or industrial floor</option>
+        <option>Flat or liquid roof</option>
+        <option>Concrete repair or protection</option>
+        <option>Metal cladding</option>
+        <option>Storage tank or bund</option>
+        <option>Balcony or walkway</option>
+        <option>Something else</option>
+      </select>
+      <label for="d2">Roughly how big?</label>
+      <select id="d2">
+        <option>Choose one&hellip;</option>
+        <option>Under 100 m&sup2;</option>
+        <option>100 &ndash; 500 m&sup2;</option>
+        <option>500 &ndash; 2,000 m&sup2;</option>
+        <option>Over 2,000 m&sup2;</option>
+        <option>Not sure &mdash; need a site survey</option>
+      </select>
+      <label for="d3">When does it start?</label>
+      <select id="d3">
+        <option>Choose one&hellip;</option>
+        <option>Within two weeks</option>
+        <option>Within a month</option>
+        <option>Pricing a tender</option>
+      </select>
+      <label for="d4">Your name and number</label>
+      <input id="d4" placeholder="Name and mobile">
+      <button class="go" type="button">Send it over</button>
+      <div class="fine">Demonstration only &mdash; nothing is sent anywhere</div>
     </div>
   </div>
 </header>
 
 <div class="wrap">
 
+  <section>
+    <div class="sh">How it works</div>
+    <p class="lede2">Most of our customers come to us with a job rather than a shopping list.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>You tell us the job</h3><p>Substrate, area, condition, and when it starts. A photograph is usually enough to get going.</p></div>
+      <div class="step"><div class="n">2</div><h3>We work out what it takes</h3><p>The right system for that substrate, how much of it you need, coverage rates and how long it will take to go on.</p></div>
+      <div class="step"><div class="n">3</div><h3>We supply it</h3><p>Priced, on your account, delivered across Northern Ireland &mdash; with someone on the end of the phone if it changes on site.</p></div>
+    </div>
+  </section>
+
   <section id="counter">
-    <div class="sh">The Trade Counter &mdash; The Part That Should Not Need A Phone Call</div>
-    <p class="tagp"><b>Signed in as: J. McKee &mdash; McKee Industrial Coatings Ltd &middot; Account
-    TR-0418 &middot; 30-day terms.</b> Prices below are this account's agreed trade prices, not list.
-    <b>Every figure on this page is an invented placeholder for demonstration.</b></p>
+    <div class="sh">Trade counter &mdash; order online, any hour</div>
+    <p class="lede2">Signed in as <b>J. McKee, McKee Industrial Coatings Ltd</b> &middot; account TR-0418
+    &middot; 30-day terms. Prices shown are your account's agreed trade prices.</p>
 
     <div class="pg">
       <div class="pc">
@@ -284,22 +390,18 @@ h1,h2,.box h3,.step h3{font-family:Bitter,Georgia,"Times New Roman",serif}
         <div class="add"><input class="qty" value="4" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
       </div>
       <div class="pc" style="border-color:var(--acc)">
-        <div class="sku">Jotun &middot; Remmers &middot; Flexcrete</div>
-        <b class="nm">Coating systems &mdash; deliberately not sold from a dropdown</b>
-        <div style="font-size:13.5px;color:var(--mut);line-height:1.5;margin-bottom:12px">Substrate,
-        condition and specification decide the system. <b>These stay an enquiry, exactly as they are
-        today.</b></div>
-        <div class="add"><button class="ab" type="button" style="background:var(--deep)">Request a specification</button></div>
+        <div class="sku">Coating systems</div>
+        <b class="nm">Jotun, Remmers, Flexcrete &mdash; priced against your job</b>
+        <div style="font-size:13.5px;color:var(--mut);line-height:1.5;margin-bottom:12px">Substrate and
+        condition decide the system and the quantities. Tell us the job and we will price it properly.</div>
+        <div class="add"><button class="ab" type="button" style="background:var(--deep)">Get an estimate</button></div>
       </div>
     </div>
   </section>
 
-  <section id="reorder">
-    <div class="sh">&ldquo;The Same As Last Time&rdquo; &mdash; In One Click</div>
-    <p class="tagp"><b>This is the feature that actually removes phone calls.</b> A contractor almost
-    never wants something new &mdash; he wants what he had last month. Today that is a call to your
-    counter and one of your team keying it in by hand.</p>
-
+  <section>
+    <div class="sh">Order it again</div>
+    <p class="lede2">Everything you have had from us, ready to repeat.</p>
     <div class="ro">
       <div class="rh"><div>Your recent orders</div><span>McKee Industrial Coatings Ltd &middot; account TR-0418</span></div>
       <div class="rr">
@@ -315,83 +417,99 @@ h1,h2,.box h3,.step h3{font-family:Bitter,Georgia,"Times New Roman",serif}
         <button class="rb" type="button">Order it again</button>
       </div>
     </div>
+  </section>
 
-    <div class="steps" style="margin-top:20px">
-      <div class="step"><div class="n">1</div><h3>He orders at 6am</h3><p>Before your counter opens, from the van, the night before a job. The order is waiting when your team arrives.</p></div>
-      <div class="step"><div class="n">2</div><h3>Nobody keys it in</h3><p>It arrives priced, on his account, on his terms. No one stops what they are doing to take it down.</p></div>
-      <div class="step"><div class="n">3</div><h3>You can see it</h3><p>Which products, which accounts, which brands &mdash; recorded, and readable against the stock you are holding.</p></div>
+  <section id="brands">
+    <div class="sh">The brands we carry</div>
+    <p class="lede2">Main stockist and technical partner across Northern Ireland.</p>
+    <div class="bl">
+      <div class="bi">Jotun</div>
+      <div class="bi">Remmers</div>
+      <div class="bi">Rust-Oleum</div>
+      <div class="bi">Tor Coatings</div>
+      <div class="bi">Flexcrete</div>
+      <div class="bi">Watco</div>
     </div>
   </section>
 
   <section id="spec">
     <div class="spec">
       <h2>For architects, engineers and specifiers</h2>
-      <p><b>The page that does not exist on your website today</b> &mdash; and the one worth the most,
-      because a system written into a specification has to be bought from you by whoever wins the job.</p>
+      <p class="sp">Technical data sheets, NBS-ready specification wording, and CPD seminars delivered
+      at your office. If you are writing a coating into a document, start here.</p>
       <div class="dl">
-        <div class="dli"><div><b>CPD: Protective coatings for structural steel</b><span>RIBA-style seminar &middot; at your office &middot; 45 minutes</span></div><div class="g">Book</div></div>
-        <div class="dli"><div><b>CPD: Intumescent fire protection systems</b><span>Seminar &middot; at your office &middot; 45 minutes</span></div><div class="g">Book</div></div>
-        <div class="dli"><div><b>Resin floor systems &mdash; technical library</b><span>Data sheets and NBS-ready wording</span></div><div class="g">Download</div></div>
-        <div class="dli"><div><b>Liquid roofing &mdash; technical library</b><span>Data sheets and NBS-ready wording</span></div><div class="g">Download</div></div>
-        <div class="dli"><div><b>Concrete repair and protection</b><span>Data sheets and NBS-ready wording</span></div><div class="g">Download</div></div>
-        <div class="dli"><div><b>Book a site survey</b><span>Substrate assessment and written specification</span></div><div class="g">Request</div></div>
+        <div class="dli"><div><b>CPD: Protective coatings for structural steel</b><i>45-minute seminar, at your office</i></div><div class="g">Book</div></div>
+        <div class="dli"><div><b>CPD: Intumescent fire protection systems</b><i>45-minute seminar, at your office</i></div><div class="g">Book</div></div>
+        <div class="dli"><div><b>Resin floor systems</b><i>Data sheets and specification wording</i></div><div class="g">Download</div></div>
+        <div class="dli"><div><b>Liquid roofing systems</b><i>Data sheets and specification wording</i></div><div class="g">Download</div></div>
+        <div class="dli"><div><b>Concrete repair and protection</b><i>Data sheets and specification wording</i></div><div class="g">Download</div></div>
+        <div class="dli"><div><b>Book a site survey</b><i>Substrate assessment and written specification</i></div><div class="g">Request</div></div>
       </div>
-      <p style="margin-top:20px;font-size:14.5px"><b>You already own all of this.</b> Twenty-five
-      brochures are already hosted on your website, and you already deliver CPD presentations. <b>There
-      is simply no page telling a specifier that either exists, and nothing recording who took
-      what.</b></p>
+    </div>
+
+    <div class="optin">
+      <h3>The Patterson technical library</h3>
+      <p>Twenty-five system guides, data sheets and specification documents covering everything we
+      supply. One email and the whole library is yours, plus a note whenever a system is updated or a
+      new one lands.</p>
+      <div class="orow">
+        <input placeholder="Your work email" aria-label="Your work email">
+        <input placeholder="Practice or company" aria-label="Practice or company">
+        <button type="button">Send me the library</button>
+      </div>
+      <div class="ofine">Demonstration only &mdash; nothing is sent anywhere. Technical documents and
+      system updates only. No advertising, and you can stop them at any time.</div>
     </div>
   </section>
 
   <section id="work">
-    <div class="sh">Bring The Best Work To The Front</div>
-    <div class="cs">
-      <div class="csb">
-        <div class="k">Case study &middot; County Down</div>
-        <h3>Royal Hillsborough Castle &mdash; gates</h3>
-        <p><b>The King's official residence in Northern Ireland.</b> It is genuinely on your website
-        today, and it is one of the strongest references a coatings supplier on this island can hold.</p>
-        <p><b>It is currently published at an address that says &ldquo;test-1&rdquo;</b>, three clicks
-        from your homepage, and it is one of only four case studies in twenty-seven years of trading.</p>
-        <p>Renaming the address takes about ten minutes. Putting it on the homepage takes about the
-        same. <b>Neither costs anything.</b></p>
+    <div class="sh">Our work</div>
+    <p class="lede2">Coatings we have supplied and specified across Northern Ireland.</p>
+    <div class="csg">
+      <div class="csc">
+        <div class="cim">Hillsborough, Co Down</div>
+        <div class="cb">
+          <div class="k">Conservation &amp; restoration</div>
+          <h3>Royal Hillsborough Castle &mdash; gates</h3>
+          <p>Coating system supplied for the restoration of the gates at the King's official residence
+          in Northern Ireland.</p>
+        </div>
       </div>
-      <div class="urlbox">
-        <span class="lbl">Your live case study addresses today</span>
-        /case-studies/<span class="bad">test-1</span>/<br>
-        /case-studies/<span class="bad">test-8</span>/<br>
-        /case-studies/<span class="bad">test-case-study</span>/<br>
-        /case-studies/<span class="good">interior-waterproofing</span>/<br><br>
-        <span class="lbl">What the first one should say</span>
-        /case-studies/<span class="good">royal-hillsborough-<br>castle-gates</span>/
+      <div class="csc">
+        <div class="cim">Commercial</div>
+        <div class="cb">
+          <div class="k">Liquid roofing</div>
+          <h3>Commercial roof renovation</h3>
+          <p>Full liquid roofing system specified and supplied for a commercial roof refurbishment.</p>
+        </div>
+      </div>
+      <div class="csc">
+        <div class="cim">Waterproofing</div>
+        <div class="cb">
+          <div class="k">Damp &amp; waterproofing</div>
+          <h3>Interior waterproofing</h3>
+          <p>Internal tanking and waterproofing system supplied for a below-ground interior.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="note">
-    <div class="notebox">
-      <div class="nl">Read this first &mdash; what changed, and what deliberately did not</div>
-      <p><b>Nothing here is a new website.</b> Your site is well built, fast on a phone, and your 571
-      products are already catalogued across 27 categories. That is the expensive part and it is done.
-      This demonstration only switches things on.</p>
-      <p><b>What changed:</b> trade prices and an add-to-basket on tools and consumables; an
-      &ldquo;order it again&rdquo; list from a contractor's own history; a page built for specifiers
-      around the CPD presentations and 25 brochures you already have; and your Royal Hillsborough
-      Castle work moved to the front and given a real web address.</p>
-      <p><b>What deliberately did not change:</b> coatings are still an enquiry. Jotun, Remmers and
-      Flexcrete systems need a substrate, a specification and a conversation with your team, and
-      nothing here tries to sell them from a dropdown. <b>The tools and consumables are the ones already
-      sitting on your site with no price on them.</b></p>
-      <p><b>Prices, stock levels, account names and order history above are invented placeholders.</b>
-      We do not know your trade prices and have not guessed at your margins. If your prices are agreed
-      account by account &mdash; which for a distributor they usually are &mdash; then the right build
-      is exactly what is shown here: <b>a login, not public pricing.</b></p>
+  <section>
+    <div class="sh">Patterson Protective Coatings</div>
+    <div class="facts">
+      <div class="fct"><b>1999</b><span>Trading since</span></div>
+      <div class="fct"><b>571</b><span>Products stocked</span></div>
+      <div class="fct"><b>6</b><span>Brands carried</span></div>
+      <div class="fct"><b>NI</b><span>Wide delivery</span></div>
     </div>
+  </section>
 
-    <div class="big">
-      <h2>571 products. Twenty-seven years. One phone.</h2>
-      <p>You are not a contractor and you do not need adverts. <b>You need the counter you have already
-      built to be open when your customers are working.</b></p>
+  <section>
+    <div class="cband">
+      <h2>Tell us the job.</h2>
+      <p>Send over the substrate, the area and when it starts. We will come back with the system, the
+      quantities and a price &mdash; and if it is easier to walk it, we will come and look.</p>
+      <a class="cb2" href="#estimate">Get a materials estimate</a>
     </div>
   </section>
 </div>
@@ -400,18 +518,19 @@ h1,h2,.box h3,.step h3{font-family:Bitter,Georgia,"Times New Roman",serif}
   <div class="wrap">
     <p><b>Concept demonstration only.</b> Built by AG1 Consulting for Patterson Protective Coatings Ltd
     (company NI035851), 347b Albertbridge Road, Belfast BT5 4PY &middot; 7 September 2026.</p>
-    <p>This is not a live website and nothing on it can be bought. <b>All prices, list prices, stock
-    levels, account names, account numbers, order numbers, order histories and delivery claims shown
-    above are invented placeholders created for demonstration and are not Patterson Protective Coatings'
-    real prices, stock, customers or terms.</b> Product names are taken from the public product listing
-    on ppcoatings.co.uk. The Royal Hillsborough Castle Gates reference is taken from the title of
-    Patterson Protective Coatings' own published case study page and has not been independently
-    verified by AG1. The counts of 571 products, 27 categories, 25 brochures and 4 case studies are
-    read from the site's own published XML sitemaps on 7 September 2026. <b>No claim is made or implied
-    about what any of the changes shown here would earn, and no revenue, order volume or profit figure
-    is stated anywhere.</b> Whether online trade ordering suits Patterson Protective Coatings' pricing,
-    margins or counter operation is a commercial judgement for its directors alone.</p>
+    <p>This is not a live website and nothing on it can be bought, booked or downloaded. <b>All prices,
+    list prices, stock levels, account names, account numbers, order numbers, order histories, delivery
+    claims and CPD seminar titles shown above are invented placeholders created for demonstration, and
+    are not Patterson Protective Coatings' real prices, stock, customers, terms or services.</b>
+    Product names, brand names and the product and brochure counts are taken from the public listings
+    on ppcoatings.co.uk as read on 7 September 2026. <b>The three projects shown under &ldquo;Our
+    work&rdquo; are taken from the titles of Patterson Protective Coatings' own published case study
+    pages and have not been independently verified by AG1</b>; the descriptions beneath them are
+    illustrative wording written by AG1, not the company's own account of those projects.
+    <b>Whether online trade ordering, a technical-library signup or any other element shown here suits
+    Patterson Protective Coatings' pricing, margins, terms or operation is a commercial judgement for
+    its directors alone, and no claim is made or implied about what any of it would earn.</b></p>
   </div>
 </footer>
 
-<a class="stick" href="#counter">See the trade counter</a>
+<a class="stick" href="#estimate">Get a materials estimate</a>
