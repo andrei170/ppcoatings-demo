@@ -1,0 +1,417 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Patterson Protective Coatings - Trade Counter Concept - AG1 Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181c; --mut:#57616c; --line:#e2e6ec; --bg:#f8fafb; --panel:#fff;
+  --deep:#12283f; --deep2:#1d3b58; --acc:#2f6fbf; --acc2:#7fb4e3; --ok:#1f7a45;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Bitter,Georgia,serif;font-weight:700;line-height:1.16;letter-spacing:-.014em;text-wrap:balance}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.demobar{background:#0d1117;color:#e6edf3;font-size:12.5px;text-align:center;padding:8px 14px}
+.demobar b{color:#f0b13c}
+.urg{background:#8a1c1c;color:#fff;text-align:center;font-size:13.5px;padding:9px;font-weight:500}
+.urg a{color:#fff}
+nav{position:sticky;top:0;z-index:60;background:rgba(248,250,251,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.logo{font-family:Bitter,serif;font-weight:700;font-size:19px}
+.logo span{color:var(--acc)}
+.navl{display:flex;gap:20px;font-size:14.5px;font-weight:500}
+.navl a{color:var(--mut);text-decoration:none}.navl a:hover{color:var(--deep2)}
+.navl a.on{color:var(--deep2);font-weight:700}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--deep2);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:10px 17px;border-radius:8px;white-space:nowrap}
+@media(max-width:900px){.navl{display:none}}
+.hero{position:relative;background:linear-gradient(155deg,var(--deep),var(--deep2));color:#eef3f8;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;opacity:.13;
+  background:repeating-linear-gradient(78deg,transparent 0 38px,rgba(255,255,255,.55) 38px 40px),
+             repeating-linear-gradient(-12deg,transparent 0 38px,rgba(255,255,255,.3) 38px 39px)}
+.heroin{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:42px;align-items:center;padding:56px 0 62px}
+@media(max-width:980px){.heroin{grid-template-columns:1fr;gap:28px;padding:38px 0 44px}}
+.eyeb{display:inline-block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--acc2);border:1px solid rgba(255,255,255,.28);padding:5px 12px;border-radius:999px;margin-bottom:17px}
+.hero h1{font-size:clamp(31px,5vw,48px);margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--acc2)}
+.hero .lede{font-size:17px;color:#c6d3df;max-width:520px}
+.ticks{list-style:none;margin-top:20px;display:grid;gap:9px}
+.ticks li{display:flex;gap:10px;font-size:15.5px;color:#dde6ee}
+.ticks svg{flex:0 0 18px;margin-top:4px;fill:var(--acc2)}
+.form{background:var(--panel);border-radius:14px;padding:24px;box-shadow:0 20px 54px rgba(0,0,0,.3);color:var(--ink)}
+.form h3{font-size:20px;margin-bottom:4px}
+.form .fs{font-size:13.5px;color:var(--mut);margin-bottom:14px}
+label{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin:12px 0 5px}
+select,input{width:100%;font-family:inherit;font-size:15px;color:var(--ink);background:#fbfcfd;border:1px solid var(--line);border-radius:8px;padding:11px 12px}
+select:focus,input:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+.chk{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chk label{display:inline-flex;align-items:center;gap:7px;margin:0;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fbfcfd;font-size:13.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);cursor:pointer}
+.chk input{width:auto;padding:0;margin:0}
+.btn{width:100%;margin-top:18px;background:var(--acc);color:#fff;border:0;border-radius:9px;padding:14px;font-family:Bitter,serif;font-size:16px;font-weight:700;cursor:pointer}
+.btn:hover{filter:brightness(.88)}
+.hint{font-size:12px;color:var(--mut);margin-top:10px;text-align:center}
+.out{display:none;margin-top:15px;border-radius:10px;padding:15px 16px;font-size:14.5px;border:1px solid}
+.out.show{display:block}
+.out b{display:block;font-family:Bitter,serif;font-size:16.5px;margin-bottom:5px}
+.o-hi{background:#eef6f0;border-color:#bedcc6;color:#1d5734}
+.o-md{background:#fdf6ea;border-color:#ecdcb2;color:#775413}
+.o-lo{background:#f3f5f7;border-color:#dde2e7;color:#48515a}
+.o-urg{background:#fdeeee;border-color:#f0c6c4;color:#8a1c1c}
+.trust{background:#0e141a;color:#b6c2cd;padding:15px 0}
+.trustin{display:flex;flex-wrap:wrap;justify-content:center;gap:11px 34px;font-size:13.5px}
+.trustin b{color:var(--acc2);font-weight:700}
+section{padding:58px 0}
+.sh{text-align:center;max-width:680px;margin:0 auto 34px}
+.sh .kick{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:10px}
+.sh h2{font-size:clamp(25px,3.4vw,33px);margin-bottom:11px}
+.sh p{color:var(--mut);font-size:16.5px}
+.band{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:17px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden}
+.ctop{height:100px;position:relative;background:linear-gradient(140deg,var(--deep),var(--deep2))}
+.ctop::after{content:"";position:absolute;inset:0;opacity:.24;background:repeating-linear-gradient(78deg,transparent 0 15px,rgba(255,255,255,.5) 15px 16px)}
+.cbody{padding:17px}.cbody h3{font-size:18px;margin-bottom:6px}
+.cbody p{font-size:14.5px;color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:24px}
+.box.pri{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#eef3f8;border-color:var(--deep2)}
+.box h3{font-size:20px;margin-bottom:10px}
+.box ul{margin:0 0 0 19px;font-size:15px;color:var(--mut)}
+.box.pri ul{color:#c6d3df}
+.box li{margin-bottom:8px}
+.tagp{display:inline-block;font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;background:var(--acc2);color:#0e1a26;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:16px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.fact .k{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:7px}
+.fact .v{font-family:Bitter,serif;font-size:22px;font-weight:700;color:var(--deep2)}
+.fact .n{font-size:13.5px;color:var(--mut);margin-top:5px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:22px;counter-reset:s}
+.step{counter-increment:s;position:relative;padding-left:50px}
+.step::before{content:counter(s);position:absolute;left:0;top:0;width:37px;height:37px;border-radius:50%;background:var(--deep2);color:#fff;font-family:Bitter,serif;font-weight:700;font-size:17px;display:grid;place-items:center}
+.step h3{font-size:17.5px;margin-bottom:5px}.step p{font-size:14.5px;color:var(--mut)}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:17px}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:20px}
+.stars{color:#e0a32e;font-size:15.5px;letter-spacing:2px}
+.rev p{font-size:14.8px;color:var(--mut);margin:9px 0 12px;font-style:italic}
+.rev .who{font-size:13.5px;font-weight:700}
+.rev .who span{display:block;font-weight:400;color:var(--mut);font-size:12.5px;margin-top:2px}
+.ratebar{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.ratebig{font-family:Bitter,serif;font-size:42px;font-weight:700;color:var(--deep2)}
+.ratetxt{font-size:14.5px;color:var(--mut);text-align:left}
+.badges{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.bdg{background:var(--panel);border:1px dashed #b9c3d1;border-radius:11px;padding:14px 20px;text-align:center;min-width:140px}
+.bdg b{display:block;font-family:Bitter,serif;font-size:16px;color:var(--deep2)}
+.bdg span{font-size:11.5px;color:var(--mut);letter-spacing:.05em;text-transform:uppercase}
+.areas{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:20px}
+.areas span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;color:var(--mut)}
+.cta2{background:linear-gradient(155deg,var(--deep),var(--deep2));color:#eef3f8;text-align:center;padding:58px 0}
+.cta2 h2{font-size:clamp(25px,3.4vw,33px);margin-bottom:11px}
+.cta2 p{color:#c6d3df;font-size:16.5px;max-width:560px;margin:0 auto 22px}
+.cta2 .call{font-size:16px;padding:14px 26px;background:var(--acc2);color:#0e1a26}
+footer{background:#0b1016;color:#87929d;font-size:13.5px;padding:32px 0}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+footer h4{color:#e7edf3;font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:10px}
+footer a{color:#87929d;text-decoration:none;display:block;margin-bottom:6px}
+footer a:hover{color:var(--acc2)}
+.fnote{border-top:1px solid #1b232c;padding-top:18px;margin-top:20px;font-size:12.5px;color:#6b7681;line-height:1.65}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+</style>
+<style>
+:root{--deep:#12212e;--deep2:#1e3547;--acc:#c4611a;--acc2:#f0a563}
+h1,h2,.box h3,.step h3{font-family:Bitter,Georgia,"Times New Roman",serif}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:14px;padding:22px}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.step h3{margin:0 0 7px;font-size:17px}
+.step p{margin:0;font-size:14.5px;color:var(--mut)}
+
+/* trade counter grid */
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:18px}
+@media(max-width:1000px){.pg{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pg{grid-template-columns:1fr}}
+.pc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column}
+.pc .sku{font-size:11px;letter-spacing:.09em;color:var(--mut);text-transform:uppercase;font-weight:700}
+.pc b.nm{display:block;font-size:15px;margin:6px 0 10px;color:var(--ink);line-height:1.32}
+.pc .lst{font-size:12.5px;color:var(--mut);text-decoration:line-through}
+.pc .yr{font-size:22px;font-weight:800;color:var(--deep);font-family:Bitter,Georgia,serif}
+.pc .yl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);font-weight:800;margin-bottom:2px}
+.pc .stk{font-size:12.5px;color:#1f7a3d;font-weight:700;margin:9px 0 12px}
+.pc .stk.low{color:#a8620f}
+.pc .add{margin-top:auto;display:flex;gap:7px;align-items:center}
+.pc .qty{width:54px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;font-size:14px;text-align:center;background:#fff}
+.pc .ab{flex:1;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:10px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer}
+
+/* reorder */
+.ro{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:16px}
+.ro .rh{background:var(--deep);color:#fff;padding:14px 20px;font-weight:700;font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ro .rh span{color:#9fc0d4;font-weight:500;font-size:13.5px}
+.rr{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 20px;border-top:1px solid var(--line);flex-wrap:wrap}
+.rr .rl{font-size:14.5px}
+.rr .rl b{display:block;color:var(--ink)}
+.rr .rl span{font-size:12.5px;color:var(--mut)}
+.rr .rb{background:#fff;border:1.5px solid var(--acc);color:var(--acc);border-radius:8px;padding:8px 16px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer;white-space:nowrap}
+
+/* spec panel */
+.spec{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#fff;border-radius:18px;padding:34px}
+.spec h2{color:#fff;font-size:27px;margin:0 0 10px}
+.spec>p{color:#b9d2e0;font-size:16px;max-width:640px}
+.dl{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}
+@media(max-width:700px){.dl{grid-template-columns:1fr}}
+.dli{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:11px;padding:15px 17px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dli b{font-size:14.5px;color:#fff;display:block}
+.dli span{font-size:12.5px;color:#9fc0d4}
+.dli .g{background:var(--acc);color:#fff;border-radius:7px;padding:7px 13px;font-size:12.5px;font-weight:700;white-space:nowrap}
+
+/* case study */
+.cs{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;align-items:center}
+@media(max-width:820px){.cs{grid-template-columns:1fr}}
+.csb{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:14px;padding:24px}
+.csb .k{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--acc);font-weight:800;margin-bottom:8px}
+.csb h3{font-family:Bitter,Georgia,serif;font-size:23px;margin:0 0 10px}
+.csb p{font-size:14.5px;color:var(--mut);margin:0 0 9px}
+.urlbox{background:#0f1b24;border-radius:11px;padding:20px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;color:#dfe9ef;line-height:2}
+.urlbox .bad{color:#ff9b8a}
+.urlbox .good{color:#8ee6a8}
+.urlbox .lbl{color:#7f9cad;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:9px;font-family:IBM Plex Sans,sans-serif;font-weight:700}
+
+.notebox{max-width:900px;margin:0 auto 34px;background:#fdf7e7;border:1px solid #e0c479;border-radius:14px;padding:20px 24px}
+.notebox .nl{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:#8a6a1c;font-weight:800;margin-bottom:8px}
+.notebox p{font-size:14.5px;color:#4a4231;margin:0 0 9px}.notebox p:last-child{margin:0}
+.notebox b{color:#241c0c}
+.big{background:linear-gradient(160deg,var(--deep),var(--deep2));color:#fff;border-radius:18px;padding:34px;text-align:center}
+.big h2{color:#fff;font-size:29px;margin-bottom:10px}
+.big p{color:#bcd8e2;font-size:16.5px;max-width:660px;margin:0 auto}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;background:var(--acc);text-align:center;padding:13px;font-weight:800;color:#fff;text-decoration:none}
+@media(max-width:760px){.stick{display:block}footer{padding-bottom:78px}}
+</style>
+
+<div class="demobar">CONCEPT DEMONSTRATION &mdash; built by AG1 Consulting for Patterson Protective Coatings Ltd &middot; not a live site &middot; all prices, stock levels and order history shown are invented placeholders</div>
+
+<div class="call">Trade counter &middot; Albertbridge Road, Belfast &middot; 028 9073 1333</div>
+
+<nav>
+  <div class="wrap navin">
+    <div class="logo">Patterson <span>Protective Coatings</span></div>
+    <div class="navl">
+      <a href="#counter">Trade Counter</a>
+      <a href="#reorder">Reorder</a>
+      <a href="#spec">Specifiers</a>
+      <a href="#work">Our Work</a>
+      <a href="#note">What Changed</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap heroin">
+    <div class="eyeb">Belfast &middot; supplying the trade since 1999</div>
+    <h1>Your counter. Open at six in the morning.</h1>
+    <p>Jotun, Remmers, Rust-Oleum, Tor, Flexcrete and Watco &mdash; <b>571 products, your agreed trade
+    price, and last month's order one click away.</b> Coatings still come with a specification and a
+    conversation. Brushes and rollers should not need one.</p>
+    <div class="badges">
+      <span class="bdg">Trade account pricing</span>
+      <span class="bdg">Next-day across NI</span>
+      <span class="bdg">27 years supplying Belfast</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="counter">
+    <div class="sh">The Trade Counter &mdash; The Part That Should Not Need A Phone Call</div>
+    <p class="tagp"><b>Signed in as: J. McKee &mdash; McKee Industrial Coatings Ltd &middot; Account
+    TR-0418 &middot; 30-day terms.</b> Prices below are this account's agreed trade prices, not list.
+    <b>Every figure on this page is an invented placeholder for demonstration.</b></p>
+
+    <div class="pg">
+      <div class="pc">
+        <div class="sku">PPC-BR-1140</div>
+        <b class="nm">Contractor Paint Brush &mdash; 4&Prime;</b>
+        <div class="lst">List &pound;9.80</div>
+        <div class="yl">Your price</div><div class="yr">&pound;6.15</div>
+        <div class="stk">In stock &mdash; Belfast</div>
+        <div class="add"><input class="qty" value="12" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
+      </div>
+      <div class="pc">
+        <div class="sku">PPC-RF-0620</div>
+        <b class="nm">Wire Cage Roller Frame &mdash; 9&Prime;</b>
+        <div class="lst">List &pound;7.40</div>
+        <div class="yl">Your price</div><div class="yr">&pound;4.60</div>
+        <div class="stk">In stock &mdash; Belfast</div>
+        <div class="add"><input class="qty" value="6" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
+      </div>
+      <div class="pc">
+        <div class="sku">PPC-OV-3300</div>
+        <b class="nm">Disposable Paint Overalls &mdash; XL, box of 25</b>
+        <div class="lst">List &pound;96.00</div>
+        <div class="yl">Your price</div><div class="yr">&pound;71.50</div>
+        <div class="stk low">4 left &mdash; more due Thursday</div>
+        <div class="add"><input class="qty" value="2" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
+      </div>
+      <div class="pc">
+        <div class="sku">PPC-MP-0075</div>
+        <b class="nm">Drill Mixing Paddle &mdash; heavy duty</b>
+        <div class="lst">List &pound;24.50</div>
+        <div class="yl">Your price</div><div class="yr">&pound;17.20</div>
+        <div class="stk">In stock &mdash; Belfast</div>
+        <div class="add"><input class="qty" value="3" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
+      </div>
+      <div class="pc">
+        <div class="sku">PPC-CH-1015</div>
+        <b class="nm">Chipping Hammer &mdash; 1.5lb, anti-sparking</b>
+        <div class="lst">List &pound;41.00</div>
+        <div class="yl">Your price</div><div class="yr">&pound;30.75</div>
+        <div class="stk">In stock &mdash; Belfast</div>
+        <div class="add"><input class="qty" value="1" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
+      </div>
+      <div class="pc">
+        <div class="sku">PPC-PR-0900</div>
+        <b class="nm">Brown Paper Masking Roll &mdash; 900mm</b>
+        <div class="lst">List &pound;13.20</div>
+        <div class="yl">Your price</div><div class="yr">&pound;8.95</div>
+        <div class="stk">In stock &mdash; Belfast</div>
+        <div class="add"><input class="qty" value="8" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
+      </div>
+      <div class="pc">
+        <div class="sku">PPC-SQ-0210</div>
+        <b class="nm">Disposable Squeegee Holder</b>
+        <div class="lst">List &pound;18.60</div>
+        <div class="yl">Your price</div><div class="yr">&pound;13.40</div>
+        <div class="stk">In stock &mdash; Belfast</div>
+        <div class="add"><input class="qty" value="4" aria-label="Quantity"><button class="ab" type="button">Add</button></div>
+      </div>
+      <div class="pc" style="border-color:var(--acc)">
+        <div class="sku">Jotun &middot; Remmers &middot; Flexcrete</div>
+        <b class="nm">Coating systems &mdash; deliberately not sold from a dropdown</b>
+        <div style="font-size:13.5px;color:var(--mut);line-height:1.5;margin-bottom:12px">Substrate,
+        condition and specification decide the system. <b>These stay an enquiry, exactly as they are
+        today.</b></div>
+        <div class="add"><button class="ab" type="button" style="background:var(--deep)">Request a specification</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reorder">
+    <div class="sh">&ldquo;The Same As Last Time&rdquo; &mdash; In One Click</div>
+    <p class="tagp"><b>This is the feature that actually removes phone calls.</b> A contractor almost
+    never wants something new &mdash; he wants what he had last month. Today that is a call to your
+    counter and one of your team keying it in by hand.</p>
+
+    <div class="ro">
+      <div class="rh"><div>Your recent orders</div><span>McKee Industrial Coatings Ltd &middot; account TR-0418</span></div>
+      <div class="rr">
+        <div class="rl"><b>Order #PPC-24871 &mdash; 14 August</b><span>Contractor brushes &times;12, roller frames &times;6, masking roll &times;8 &mdash; &pound;155.00</span></div>
+        <button class="rb" type="button">Order it again</button>
+      </div>
+      <div class="rr">
+        <div class="rl"><b>Order #PPC-24610 &mdash; 22 July</b><span>Overalls &times;2 boxes, mixing paddles &times;3, squeegee holders &times;4 &mdash; &pound;248.20</span></div>
+        <button class="rb" type="button">Order it again</button>
+      </div>
+      <div class="rr">
+        <div class="rl"><b>Order #PPC-24388 &mdash; 3 July</b><span>Chipping hammers &times;2, brown paper roll &times;10 &mdash; &pound;151.00</span></div>
+        <button class="rb" type="button">Order it again</button>
+      </div>
+    </div>
+
+    <div class="steps" style="margin-top:20px">
+      <div class="step"><div class="n">1</div><h3>He orders at 6am</h3><p>Before your counter opens, from the van, the night before a job. The order is waiting when your team arrives.</p></div>
+      <div class="step"><div class="n">2</div><h3>Nobody keys it in</h3><p>It arrives priced, on his account, on his terms. No one stops what they are doing to take it down.</p></div>
+      <div class="step"><div class="n">3</div><h3>You can see it</h3><p>Which products, which accounts, which brands &mdash; recorded, and readable against the stock you are holding.</p></div>
+    </div>
+  </section>
+
+  <section id="spec">
+    <div class="spec">
+      <h2>For architects, engineers and specifiers</h2>
+      <p><b>The page that does not exist on your website today</b> &mdash; and the one worth the most,
+      because a system written into a specification has to be bought from you by whoever wins the job.</p>
+      <div class="dl">
+        <div class="dli"><div><b>CPD: Protective coatings for structural steel</b><span>RIBA-style seminar &middot; at your office &middot; 45 minutes</span></div><div class="g">Book</div></div>
+        <div class="dli"><div><b>CPD: Intumescent fire protection systems</b><span>Seminar &middot; at your office &middot; 45 minutes</span></div><div class="g">Book</div></div>
+        <div class="dli"><div><b>Resin floor systems &mdash; technical library</b><span>Data sheets and NBS-ready wording</span></div><div class="g">Download</div></div>
+        <div class="dli"><div><b>Liquid roofing &mdash; technical library</b><span>Data sheets and NBS-ready wording</span></div><div class="g">Download</div></div>
+        <div class="dli"><div><b>Concrete repair and protection</b><span>Data sheets and NBS-ready wording</span></div><div class="g">Download</div></div>
+        <div class="dli"><div><b>Book a site survey</b><span>Substrate assessment and written specification</span></div><div class="g">Request</div></div>
+      </div>
+      <p style="margin-top:20px;font-size:14.5px"><b>You already own all of this.</b> Twenty-five
+      brochures are already hosted on your website, and you already deliver CPD presentations. <b>There
+      is simply no page telling a specifier that either exists, and nothing recording who took
+      what.</b></p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sh">Bring The Best Work To The Front</div>
+    <div class="cs">
+      <div class="csb">
+        <div class="k">Case study &middot; County Down</div>
+        <h3>Royal Hillsborough Castle &mdash; gates</h3>
+        <p><b>The King's official residence in Northern Ireland.</b> It is genuinely on your website
+        today, and it is one of the strongest references a coatings supplier on this island can hold.</p>
+        <p><b>It is currently published at an address that says &ldquo;test-1&rdquo;</b>, three clicks
+        from your homepage, and it is one of only four case studies in twenty-seven years of trading.</p>
+        <p>Renaming the address takes about ten minutes. Putting it on the homepage takes about the
+        same. <b>Neither costs anything.</b></p>
+      </div>
+      <div class="urlbox">
+        <span class="lbl">Your live case study addresses today</span>
+        /case-studies/<span class="bad">test-1</span>/<br>
+        /case-studies/<span class="bad">test-8</span>/<br>
+        /case-studies/<span class="bad">test-case-study</span>/<br>
+        /case-studies/<span class="good">interior-waterproofing</span>/<br><br>
+        <span class="lbl">What the first one should say</span>
+        /case-studies/<span class="good">royal-hillsborough-<br>castle-gates</span>/
+      </div>
+    </div>
+  </section>
+
+  <section id="note">
+    <div class="notebox">
+      <div class="nl">Read this first &mdash; what changed, and what deliberately did not</div>
+      <p><b>Nothing here is a new website.</b> Your site is well built, fast on a phone, and your 571
+      products are already catalogued across 27 categories. That is the expensive part and it is done.
+      This demonstration only switches things on.</p>
+      <p><b>What changed:</b> trade prices and an add-to-basket on tools and consumables; an
+      &ldquo;order it again&rdquo; list from a contractor's own history; a page built for specifiers
+      around the CPD presentations and 25 brochures you already have; and your Royal Hillsborough
+      Castle work moved to the front and given a real web address.</p>
+      <p><b>What deliberately did not change:</b> coatings are still an enquiry. Jotun, Remmers and
+      Flexcrete systems need a substrate, a specification and a conversation with your team, and
+      nothing here tries to sell them from a dropdown. <b>The tools and consumables are the ones already
+      sitting on your site with no price on them.</b></p>
+      <p><b>Prices, stock levels, account names and order history above are invented placeholders.</b>
+      We do not know your trade prices and have not guessed at your margins. If your prices are agreed
+      account by account &mdash; which for a distributor they usually are &mdash; then the right build
+      is exactly what is shown here: <b>a login, not public pricing.</b></p>
+    </div>
+
+    <div class="big">
+      <h2>571 products. Twenty-seven years. One phone.</h2>
+      <p>You are not a contractor and you do not need adverts. <b>You need the counter you have already
+      built to be open when your customers are working.</b></p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Concept demonstration only.</b> Built by AG1 Consulting for Patterson Protective Coatings Ltd
+    (company NI035851), 347b Albertbridge Road, Belfast BT5 4PY &middot; 7 September 2026.</p>
+    <p>This is not a live website and nothing on it can be bought. <b>All prices, list prices, stock
+    levels, account names, account numbers, order numbers, order histories and delivery claims shown
+    above are invented placeholders created for demonstration and are not Patterson Protective Coatings'
+    real prices, stock, customers or terms.</b> Product names are taken from the public product listing
+    on ppcoatings.co.uk. The Royal Hillsborough Castle Gates reference is taken from the title of
+    Patterson Protective Coatings' own published case study page and has not been independently
+    verified by AG1. The counts of 571 products, 27 categories, 25 brochures and 4 case studies are
+    read from the site's own published XML sitemaps on 7 September 2026. <b>No claim is made or implied
+    about what any of the changes shown here would earn, and no revenue, order volume or profit figure
+    is stated anywhere.</b> Whether online trade ordering suits Patterson Protective Coatings' pricing,
+    margins or counter operation is a commercial judgement for its directors alone.</p>
+  </div>
+</footer>
+
+<a class="stick" href="#counter">See the trade counter</a>
